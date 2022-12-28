@@ -1,0 +1,348 @@
+/* Estilos generales */
+
+html {
+	height: 100%;
+}
+
+:root {
+	--clr-base: #fcf1cf;
+	--clr-base2:#660000;
+	--clr-base3:black;
+}
+
+
+
+* {
+
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	height: auto;
+	
+	
+}
+
+
+
+/* Barra Nav*/
+
+header {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	display: grid;
+
+}
+
+
+.nav {
+	background-color: var(--clr-base);
+	display: flex; /*este flex es para que los tres bloques se pongan uno al lado del otro*/
+	justify-content: space-between;
+	padding: 0 1rem;
+	align-items: center;
+	font-family: 'Oswald', sans-serif;
+
+}
+
+
+
+.nav-logo {
+	grid-column: 1/4;
+	grid-row: 1/2;
+	display: flex; /*este flex es para que el logo y h1 queden uno al lado del otro*/
+	align-items: center;
+
+}
+
+nav i {
+	font-size: 2rem;
+	margin-left: 1rem;
+	color: var(--clr-base2);
+}
+
+nav div a h1 {
+	font-size: 2rem;
+	color: var(--clr-base3);
+}
+
+.btn-hamburguesa {
+	cursor: pointer;
+	display: none;
+
+}
+
+nav div a {
+	color: var(--clr-base2);
+}
+
+
+nav ul {
+	display: flex; /* y este ultimo flex es para que los <li> que estan dentro de la lista <ul> se acomoden de manera horizontal*/
+	justify-content: space-between;
+	
+
+}
+
+nav ul li a {
+	color: var(--clr-base2);
+
+		
+}
+
+nav ul li a:hover {
+	color: #ffffff;
+}
+
+nav ul li {
+	margin: 0 2rem;
+	font-size: 1.2rem;
+	font-family: 'Roboto', sans-serif;
+}
+
+/*Comienzo de secciones*/
+
+
+
+
+.home {
+	min-width: 100%;
+	height: 700px;
+	background-color: #9fff9f;;
+	height: 1000px;
+}
+
+
+.about {
+	min-width: 100%;
+	height: 700px;
+	background-color: #b3b3b3;
+}
+
+
+.goodideas {
+	min-width: 100%;
+	height: 700px;
+	background-color: #f3ff99;
+}
+
+.contact {
+	min-width: 100%;
+	height: 700px;
+	background-color: #ccedff;
+}
+
+/*Footer*/
+
+footer {
+
+	height: 20rem;
+	background-color: #fcf1cf;
+	display: grid;
+	grid-template-columns: 3fr 2fr 2fr;
+		
+}
+
+
+/* Parte de footer "GoodIdeas + speech plasmamos y desarrollamos"*/
+
+.speech_icon {
+	display: flex;
+	flex-direction: column;
+	padding: 2rem;
+	
+
+}
+
+.box_foot {
+	display: flex;
+	flex-direction: row;
+
+
+}
+
+.box_foot i  {
+	font-size: 2rem;
+	padding: 1.3rem 0.1rem;
+	color: var(--clr-base2);
+}
+
+.box_foot h2 {
+font-family: 'Oswald', sans-serif;
+
+}
+
+.box_foot2 p {
+	font-size: 1rem;
+	font-family: 'Lora', serif;
+	font-weight: bold;
+}
+
+/*Fin de GoodIdeas + speech*/
+
+/*Comienzo nav del footer*/
+
+.footer_anclas {
+	display: flex;
+	flex-direction: column;
+	padding: 2rem;
+	
+}
+
+  .footer_anclas p a {
+	font-size: 1rem;
+	font-family: 'Lora', serif;
+	font-weight: bold;
+	color: var(--clr-base3);
+
+}
+
+       
+ .footer_anclas p a:hover {
+	color: var(--clr-base2);
+}
+
+/*Fin nav del footer*/
+
+/*Comienzo redes sociales del footer*/
+
+.redes {
+	display: flex;
+	flex-direction: column;
+	padding: 2rem;
+}
+
+.redes h3 {
+	font-size: 1rem;
+	font-family: 'Lora', serif;
+	font-weight: bold;
+
+}
+
+ .iconos-redes {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+
+}
+
+.iconos-redes  a i {
+    font-size: 2rem;
+	padding: 1.3rem 0rem;
+	color: var(--clr-base2);
+
+}
+
+.iconos-redes  a i:hover {
+	color: var(--clr-base3);
+}
+
+/*fin redes sociales del footer*/
+
+/*COMINZO MEDIA QUERY*/
+
+
+@media (max-width: 768px) {
+
+	.nav {
+	padding: 0 2rem;
+}
+
+
+  .menu_nav {
+  	position: fixed;
+	background-color: rgba(0, 0, 0, 0.3);
+	width: 100%;
+	top: 80px;
+	left: 0;
+	padding: 0;
+	height: 15rem;
+	text-align: center;
+
+	left: 100%;
+	transition: left .4s;
+
+
+}
+
+.visible_menu {
+	left: 0;
+
+}
+
+.btn-hamburguesa {
+	display: block;
+
+}
+
+nav div a {
+	color: var(--clr-base2);
+}
+
+
+nav ul {
+
+	flex-direction: column;
+	justify-content: space-around;
+	
+	
+
+}
+
+nav ul li a {
+	color: var(--clr-base3);
+
+		
+}
+
+
+/*Comienzo de secciones*/
+
+
+/*Footer*/
+
+footer {
+
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+
+	
+}
+
+
+/* Parte de footer "GoodIdeas + speech plasmamos y desarrollamos"*/
+
+
+
+/*Fin de GoodIdeas + speech*/
+
+
+
+/*Comienzo nav del footer*/
+
+.footer_anclas {
+	display: none;
+	
+}
+
+ /*Fin nav del footer*/
+
+
+
+/*Comienzo redes sociales del footer*/
+
+
+/*fin redes sociales del footer*/
+
+}
+
+/*FIN MEDIA QUERY*/
+
